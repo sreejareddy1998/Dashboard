@@ -19,7 +19,7 @@ interface Props {
   results: InferenceResult[];
 }
 
-const ResultsChart: React.FC<Props> = ({ results }) => {
+const ResultsChart = ({ results }: Props) => {
   const chartData = {
     labels: results.map((r) => r.label),
     datasets: [
