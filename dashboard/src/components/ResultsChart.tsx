@@ -41,11 +41,11 @@ const ResultsChart = ({ results }: Props) => {
   };
 
   return (
-    <Box>
-      <Typography variant="h6" gutterBottom>
-        Score Chart
-      </Typography>
-      <Bar data={chartData} options={chartOptions} />
+    <Box sx={{ height: { xs: 300, sm: 400 } }}>
+      <Bar
+        data={chartData}
+        options={{ ...chartOptions, maintainAspectRatio: false }}
+      />
     </Box>
   );
 };
